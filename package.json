@@ -1,0 +1,19 @@
+{
+  "name": "svelte-preprocess-vars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://rob-balfre@github.com/rob-balfre/svelte-preprocess-vars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rob-balfre/svelte-preprocess-vars/issues"
+  },
+  "homepage": "https://github.com/rob-balfre/svelte-preprocess-vars#readme"
+}
