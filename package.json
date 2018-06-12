@@ -1,7 +1,7 @@
 {
   "name": "svelte-preprocess-vars",
   "version": "1.0.0",
-  "description": "",
+  "description": "Svelte preprocessor to inject JS variables into component styles",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
