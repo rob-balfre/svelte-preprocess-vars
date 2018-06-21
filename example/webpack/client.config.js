@@ -1,7 +1,9 @@
+const path = require('path');
 const sveltePreprocessVars = require('svelte-preprocess-vars');
 const webpack = require('webpack');
+
 const config = require('sapper/webpack/config.js');
-const variables = require('../app/shared-variables.js');
+const variablesPath = path.resolve('../app/shared-variables.js');
 
 const mode = process.env.NODE_ENV;
 const isDev = mode === 'development';
@@ -23,7 +25,7 @@ module.exports = {
 						dev: isDev,
 						hydratable: true,
 						hotReload: true,
-            preprocess: sveltePreprocessVars({variables})
+            preprocess: sveltePreprocessVars(variablesPath)
           }
 				}
 			}

@@ -2,7 +2,14 @@
 
 [Svelte preprocessor](https://svelte.technology/guide#preprocessing) to inject JS variables into component styles.
 
-Converts:
+Takes:
+```js
+module.exports = {
+  primaryColor: 'blue',
+};
+```
+
+and converts:
 ```html
 <style>
   h1 {
@@ -29,12 +36,11 @@ npm install svelte-preprocess-vars --save-dev
 Example webpack svelte-loader config:
 
 ```js
+const path = require('path');
 const webpack = require('webpack');
 const sveltePreprocessVars = require('svelte-preprocess-vars');
 
-const variables = { 
-  primaryColor: 'blue'
-}
+const variablesPath = path.resolve('shared-variables.js');
 
 module.exports = {
   module: {
@@ -46,7 +52,7 @@ module.exports = {
           options: {
             hydratable: true,
             hotReload: true,
-            preprocess: sveltePreprocessVars({variables})
+            preprocess: sveltePreprocessVars(variablesPath)
           }
         }
       }
@@ -58,6 +64,6 @@ module.exports = {
 Webpack and svelte-loader won't watch these variables for changes so make sure you restart your dev server when you update them (nodemon can come in handy here).
 For example in your package.json:
 ```js
-"dev": "nodemon --watch components/variables.js --exec sapper dev",
+"dev": "nodemon --watch shared-variables.js --exec sapper dev",
 ```
  
