@@ -3,7 +3,7 @@ const sveltePreprocessVars = require('svelte-preprocess-vars');
 const webpack = require('webpack');
 
 const config = require('sapper/webpack/config.js');
-const variablesPath = path.resolve('../app/shared-variables.js');
+const variablesPath = path.resolve('../example/app/shared-variables.js');
 
 const mode = process.env.NODE_ENV;
 const isDev = mode === 'development';

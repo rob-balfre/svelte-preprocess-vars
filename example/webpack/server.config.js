@@ -3,7 +3,7 @@ const sveltePreprocessVars = require('svelte-preprocess-vars');
 
 const config = require('sapper/webpack/config.js');
 const pkg = require('../package.json');
-const variablesPath = path.resolve('../app/shared-variables.js');
+const variablesPath = path.resolve('../example/app/shared-variables.js');
 
 module.exports = {
 	entry: config.server.entry(),

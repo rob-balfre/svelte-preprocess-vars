@@ -1,5 +1,7 @@
-module.exports = ({variablesPath} = {}) => {
+module.exports = (variablesPath) => {
   const styleTransformer = ({content, filename}) => {
+    if (!variablesPath) return;
+
     delete require.cache[variablesPath];
     const variables = require(variablesPath);
     const regEx = /var\(([^)]+)\)/g;

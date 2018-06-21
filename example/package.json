@@ -21,7 +21,7 @@
     "npm-run-all": "^4.1.2",
     "svelte": "^2.0.0",
     "svelte-loader": "^2.9.0",
-    "svelte-preprocess-vars": "^1.0.1",
+    "svelte-preprocess-vars": "^2.0.0",
     "webpack": "^4.7.0"
   }
 }
