@@ -25,7 +25,8 @@ module.exports = {
 						dev: isDev,
 						hydratable: true,
 						hotReload: true,
-            preprocess: sveltePreprocessVars(variablesPath)
+            preprocess: sveltePreprocessVars(variablesPath),
+            externalDependencies: [variablesPath]
           }
 				}
 			}

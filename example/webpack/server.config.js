@@ -23,7 +23,8 @@ module.exports = {
 					options: {
 						css: false,
 						generate: 'ssr',
-            preprocess: sveltePreprocessVars(variablesPath)
+            preprocess: sveltePreprocessVars(variablesPath),
+            externalDependencies: [variablesPath]
           }
 				}
 			}
