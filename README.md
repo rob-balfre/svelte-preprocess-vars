@@ -52,7 +52,8 @@ module.exports = {
           options: {
             hydratable: true,
             hotReload: true,
-            preprocess: sveltePreprocessVars(variablesPath)
+            preprocess: sveltePreprocessVars(variablesPath),
+            externalDependencies: [variablesPath]  // ensures svelte-loader recompiles the components if the variables change
           }
         }
       }
@@ -61,9 +62,4 @@ module.exports = {
 };
 ```
 
-Webpack and svelte-loader won't watch these variables for changes so make sure you restart your dev server when you update them (nodemon can come in handy here).
-For example in your package.json:
-```js
-"dev": "nodemon --watch shared-variables.js --exec sapper dev",
-```
- 
+Webpack and svelte-loader won't watch these variables unless you include them in your 'externalDependencies' (see example above).
